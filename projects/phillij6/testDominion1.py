@@ -7,6 +7,7 @@ Created on 1/13/2020
 
 import Dominion
 import random
+import testUtility
 from collections import defaultdict
 
 #Get player names
@@ -20,6 +21,8 @@ else:
 nC = -10 + 10 * len(player_names)
 
 #Define box
+box = testUtility.GetBoxes(nV)
+"""
 box = {}
 box["Woodcutter"]=[Dominion.Woodcutter()]*10
 box["Smithy"]=[Dominion.Smithy()]*10
@@ -46,6 +49,8 @@ box["Militia"]=[Dominion.Militia()]*10
 box["Spy"]=[Dominion.Spy()]*10
 box["Thief"]=[Dominion.Thief()]*10
 box["Throne Room"]=[Dominion.Throne_Room()]*10
+"""
+#supply_order = testUtility.supplyOrder(nV)
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
                 3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
