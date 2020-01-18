@@ -14,6 +14,7 @@ from collections import defaultdict
 player_names = ["*Annie","*Ben","*Carla"]
 
 #number of curses and victory cards
+#changed nV to 1 to see the bug created
 if len(player_names)>2:
     nV=1
 else:

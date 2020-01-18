@@ -9,7 +9,7 @@ import random
 import testUtility
 from collections import defaultdict
 
-
+#function to create the cards boxes
 def GetBoxes(nV):
     box = {}
     box["Woodcutter"]=[Dominion.Woodcutter()]*10
@@ -39,6 +39,7 @@ def GetBoxes(nV):
     box["Throne Room"]=[Dominion.Throne_Room()]*10
     return box
 
+# function that puts cards in a supply with their values
 def supplyOrder():
     supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
                     3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
@@ -47,13 +48,14 @@ def supplyOrder():
                     6:['Gold','Adventurer'],8:['Province']}
     return supply_order
 
+#function to randomize the cards in supply
 def randSupply(box):
     boxlist = [k for k in box]
     random.shuffle(boxlist)
     random10 = boxlist[:10]
     supply = defaultdict(list,[(k,box[k]) for k in random10])
     return supply
-
+#function to fill the players into the game and what type they are
 def playerFun(pN):
     players = []
     for name in pN:

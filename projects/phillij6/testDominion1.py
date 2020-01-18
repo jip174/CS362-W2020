@@ -31,6 +31,7 @@ supply = testUtility.randSupply(box)
 
 
 #The supply always has these cards
+#changed the supply of copper, silver, and gold to 0 to see the bug created
 supply["Copper"]=[Dominion.Copper()]*(60-len(player_names)*0)
 supply["Silver"]=[Dominion.Silver()]*0
 supply["Gold"]=[Dominion.Gold()]*0
